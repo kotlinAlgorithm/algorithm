@@ -8,16 +8,19 @@ main에서 각자 이름으로 branch를 생성합니다.
 스터디가 끝나면 본인의 PR을 merge합니다.
 
 - 문제 선택 기준
-프로그래머스 : 난이도 Level 2 or 3
-백준 : 실버 골드
+프로그래머스 : 난이도 Level 2 or 3 , 백준 : 실버 골드
 
 - 규칙
 1. branch 이름 작성 규칙
 branch 명은 week{num}_{이름} 형식으로 작성합니다.
 ex) week1_jaewon
+
+
 2. 문제 저장 규칙
 src/{num}week/이름/문제파일들
 ex) src/1week/acw/문제 제목.kt
+
+
 3. PR 작성 규칙
 제목은 [Week{num}] 이름 : 푼 문제 이름 형식으로 작성합니다.
 ex) [Week1] 안찬우: 튜플, 거리두기 확인하기, 조이스틱
