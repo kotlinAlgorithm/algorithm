@@ -2,7 +2,7 @@
  * https://www.acmicpc.net/problem/20417
  * 백준 20417번 역전의 제왕
  */
-package week1
+package week1.eryuksa
 
 import java.util.*
 

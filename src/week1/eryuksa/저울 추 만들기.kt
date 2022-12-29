@@ -3,7 +3,7 @@
  * 백준 2205번 저울 추 만들기
  */
 
-package week1
+package week1.eryuksa
 
 import java.util.LinkedList
 
