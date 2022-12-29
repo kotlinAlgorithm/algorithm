@@ -47,9 +47,6 @@ fun main() {
             submissionOrder = i
         )
 
-        // 03:10 10번   3번쨰
-        // 03:50 1번    10번째
-
         if (minute > 180) {
             frozenSubmissionCount++
             playerList[playerIndex].frozenSubmissionQueue.offer(submissionInfo)
