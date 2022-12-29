@@ -2,7 +2,7 @@
  * https://www.acmicpc.net/problem/20417
  * 백준 20417번 역전의 제왕
  */
-package week1.eryuksa
+package week1
 
 import java.util.*
 
@@ -15,7 +15,6 @@ data class Player(
     var reverseScore: Int,
     val frozenSubmissionQueue: PriorityQueue<SubmissionInfo>
 )
-
 data class SubmissionInfo(val submissionMinute: Int, val problemNumber: Int, val submissionCount: Int, val submissionOrder: Int)
 
 fun main() {
@@ -47,6 +46,9 @@ fun main() {
             submissionCount = submissionCount,
             submissionOrder = i
         )
+
+        // 03:10 10번   3번쨰
+        // 03:50 1번    10번째
 
         if (minute > 180) {
             frozenSubmissionCount++

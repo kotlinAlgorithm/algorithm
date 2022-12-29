@@ -3,7 +3,7 @@
  * 백준 5638번 수문
  */
 
-package week1.eryuksa
+package week1
 
 import java.util.StringTokenizer
 
