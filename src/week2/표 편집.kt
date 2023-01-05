@@ -45,14 +45,14 @@ class Chart {
     private lateinit var cursor: Record
 
     fun makeChart(chartSize: Int, cursorIndex: Int): Chart {
-        var prevRecord = Record(0, null, null)
+        var prevRecord: Record? = null
 
-        repeat(chartSize - 1) { i ->
-            val newRecord = Record(i + 1, prevRecord, null)
+        repeat(chartSize) { i ->
+            val newRecord = Record(i, null, null)
             prevRecord?.right = newRecord
+            newRecord.left = prevRecord
             prevRecord = newRecord
-
-            if (i + 1 == cursorIndex) cursor = newRecord
+            if (i == cursorIndex) cursor = newRecord
         }
 
         return this
