@@ -12,6 +12,7 @@ class 최소비용구하기2 {
     lateinit var minCity: Array<MutableSet<Int>>
     val pq = PriorityQueue<Pair<Int, Int>>(compareBy { it.first })
 
+
     fun dijkstra(start: Int) {
         pq.add(Pair(0, start))
         distance[start] = 0
@@ -26,8 +27,8 @@ class 최소비용구하기2 {
                 if (cost < distance[i.first]) {
                     distance[i.first] = cost
                     pq.add(Pair(cost, i.first))
+                    minCity[i.first]= mutableSetOf()
                     minCity[i.first].addAll(minCity[now])
-                    minCity[i.first].remove(i.first)
                     minCity[i.first].add(i.first)
                 }
             }
@@ -50,7 +51,6 @@ class 최소비용구하기2 {
 
 
         dijkstra(start)
-
         println(distance[end])
         println(minCity[end].size)
         println(minCity[end].joinToString(" "))
