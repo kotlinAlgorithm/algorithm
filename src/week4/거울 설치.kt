@@ -1,4 +1,4 @@
-package week3
+package week4
 
 /**
  * https://www.acmicpc.net/problem/2151
