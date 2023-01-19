@@ -3,6 +3,9 @@ package week4
 import java.util.StringTokenizer
 import java.util.LinkedList
 
+/**
+ * https://www.acmicpc.net/problem/1043
+ */
 fun main() {
     val (peopleSize, partySize) = readln().trim().split(" ").map(String::toInt)
     val partiesOfPerson = Array(peopleSize + 1) { mutableListOf<Int>() }
