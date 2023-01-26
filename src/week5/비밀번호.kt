@@ -1,5 +1,9 @@
 package week5
 
+/**
+ * https://www.acmicpc.net/problem/2780
+ */
+
 const val PASSWORD_MAX_LENGTH = 1000
 const val MAX_NUMBER = 9
 const val MOD = 1_234_567L
