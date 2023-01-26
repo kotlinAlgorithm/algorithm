@@ -3,7 +3,6 @@ package week5
 /**
  * https://www.acmicpc.net/problem/12100
  */
-
 const val LAST_MOVE_COUNT = 5
 
 private var maxNumber = 2
