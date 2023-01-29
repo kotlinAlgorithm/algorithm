@@ -19,9 +19,7 @@ class ConveyBelt(private val slots: Array<Slot>) {
     fun rotate() {
         val lastSlot = slots.last()
         for (i in slots.lastIndex downTo 1) {
-            var prevIndex = i - 1
-            if (prevIndex < 0) prevIndex = slots.lastIndex
-            slots[i] = slots[prevIndex]
+            slots[i] = slots[i - 1]
             if (i == robotDownIndex) {
                 slots[i].hasRobot = false
             }
