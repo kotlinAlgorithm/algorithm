@@ -31,13 +31,17 @@ class ConveyBelt(private val slots: Array<Slot>) {
         for (i in slots.size / 2 - 2 downTo 1) {
             val nextIndex = (i + 1) % slots.size
             if (slots[i].hasRobot && slots[nextIndex].isPossibleToSetRobot()) {
-                slots[i].hasRobot = false
-                slots[nextIndex].setRobot()
+                moveRobotRight(i)
                 if (nextIndex == robotDownIndex) {
                     slots[nextIndex].hasRobot = false
                 }
             }
         }
+    }
+
+    private fun moveRobotRight(from: Int) {
+        slots[from].hasRobot = false
+        slots[(from + 1) % slots.size].setRobot()
     }
 
     fun setRobotAt(index: Int) {
@@ -48,7 +52,6 @@ class ConveyBelt(private val slots: Array<Slot>) {
 
     fun countNoDurabilitySlots(): Int =
         slots.count { slot -> slot.durability <= 0}
-
 }
 
 
