@@ -1,5 +1,8 @@
 package week6
 
+/**
+ * https://www.acmicpc.net/problem/2457
+ */
 data class Flower(val startNumber: Int, val endNumber: Int)
 
 fun main() {
