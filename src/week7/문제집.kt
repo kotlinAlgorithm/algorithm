@@ -18,6 +18,8 @@ fun main() {
 }
 
 private fun sort(nextProblems: Array<MutableList<Int>>, prevProblemCounts: IntArray): String {
+    // 문제를 풀면 선후 관계가 없는 문제가 새로 추가될 수 있다.
+    // 문제가 추가될 때마다 다시 정렬해야 하므로 우선순위 큐를 사용하자.
     val pq = PriorityQueue<Int>()
     for (problem in 1..prevProblemCounts.lastIndex) {
         if (prevProblemCounts[problem] == 0) {
