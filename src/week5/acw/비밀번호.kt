@@ -16,7 +16,7 @@ class `acw비밀번호` {
             return true
         }
 
-        fun addSurround(depth: Int) {
+        fun     addSurround(depth: Int) {
             for (i in 0 until 4) {
                 val ny = y + dy[i]
                 val nx = x + dx[i]
