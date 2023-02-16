@@ -6,7 +6,6 @@ data class Island(val animal: String, var animalCount: Long)
 
 private lateinit var linkedIslandIndexes: Array<MutableList<Int>>
 private lateinit var islands: Array<Island>
-private lateinit var visited: BooleanArray
 
 fun main() {
     val islandCount = readln().toInt()
@@ -21,18 +20,15 @@ fun main() {
                 linkedIslandIndexes[linkedIslandIndex].add(i + 1)
                 Island(animal, animalCount)
             }
-    visited = BooleanArray(islandCount)
 
-    print(moveAndComeBack(0))
+    print(moveAndComeBack(0, 0))
 }
 
-fun moveAndComeBack(idx: Int): Long {
-    visited[idx] = true
-
+fun moveAndComeBack(idx: Int, prevIdx: Int): Long {
     var cameSheepCount = 0L
     for (linkedIdx in linkedIslandIndexes[idx]) {
-        if (visited[linkedIdx].not()) {
-            cameSheepCount += moveAndComeBack(linkedIdx)
+        if (linkedIdx != prevIdx) {
+            cameSheepCount += moveAndComeBack(linkedIdx, idx)
         }
     }
 
